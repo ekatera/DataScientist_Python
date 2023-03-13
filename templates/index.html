@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Item Details</title>
+</head>
+<body>
+    {% if word %}
+    <h2 style="color:#069"><i>{{word_requested}}</i></h2>
+    <h2 style="color:rgb(84, 0, 153)">{{word[0][1]}}</h2>
+    {% endif %}
+
+    {% if vocab %}
+      {% for item in vocab %}
+        <h2 style="color:#069"><i>{{item[1]}}</i></h2>
+        <h2>{{item[2]}}</h2>
+      {% endfor %}
+    {% endif %}
+</body>
+</html>

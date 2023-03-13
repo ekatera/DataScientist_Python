@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Form</title>
+</head>
+<body>
+{% if not added_word and not added_translation %}
+<form method="post">
+    <label for="new_ord">Word:</label><br>
+    <input type="text" id="new_word" name="new_word"><br>
+    <label for="new_transl">Translation:</label><br>
+    <input type="text" id="new_transl" name="new_transl"><br>
+    <input class="submit" type="submit" value="Submit">
+</form>
+{% endif %}
+{% if added_word and added_translation %}
+<h2 style="color:#069"><i>{{added_word}}</i></h2>
+<h2 style="color:rgb(84, 0, 153)">{{added_translation}}</h2>
+{% endif %}
+
+{% if word_exist %}
+<h2 style="color:#069"><i>This word exist in dictionary</i></h2>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Form</title>
+</head>
+<body>
+{% if random_word %}
+<form method="post">
+    <h2 style="color:#069"><i>{{random_word}}</i></h2>
+    <label for="new_transl">Translation:</label><br>
+    <input type="text" id="quiz_item" name="quiz_item"><br>
+    <input class="submit" type="submit" value="Submit">
+</form>
+{% endif %}
+
+{% if is_right %}
+<h2 style="color:#069"><i>{{is_right}}</i></h2>
+{% endif %}
+</body>
+</html>
